@@ -38,7 +38,7 @@
             Sfdc.canvas.oauth.token(sr.oauthToken);
             Sfdc.canvas.byId('username').innerHTML = sr.context.user.fullName;
             
-            Sfdc.canvas.byId('request').innerHTML = sr;
+            Sfdc.canvas.byId('request').innerHTML = sr.context.environment;
         });
 
     </script>
