@@ -47,6 +47,6 @@
     <br/>
     <h1>Hello <span id='username'></span></h1>
     
-    <h3> <span id='user'></span></h3>
+    <h3>User ID: <span id='user'></span></h3>
 </body>
 </html>
