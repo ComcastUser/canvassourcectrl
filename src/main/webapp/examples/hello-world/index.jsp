@@ -11,7 +11,7 @@
     String yourConsumerSecret=System.getenv("CANVAS_CONSUMER_SECRET");
     //String yourConsumerSecret="1818663124211010887";
     String signedRequestJson = SignedRequest.verifyAndDecodeAsJson(signedRequest[0], yourConsumerSecret);
-    <% out.print(signedRequestJson); %>
+    
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -43,6 +43,7 @@
        
            Sfdc.canvas.byId('user').innerHTML = sr.context.user.userId;
            Sfdc.canvas.byId('param').innerHTML = signedRequestJson;
+           
         });
 
     </script>
@@ -52,6 +53,8 @@
     <h1>Hello <span id='username'></span></h1>
     
     <h3>User ID: <span id='user'></span></h3>
-    <h3>Parameters: <span id='param'></span></h3>
+    <h3>Parameters: <%= signedRequestJson %></h3>
+    <h3>Param: <span id='param'></span></h3>
+    
 </body>
 </html>
