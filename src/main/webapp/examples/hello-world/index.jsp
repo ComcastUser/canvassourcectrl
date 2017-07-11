@@ -38,8 +38,7 @@
             Sfdc.canvas.oauth.token(sr.oauthToken);
             Sfdc.canvas.byId('username').innerHTML = sr.context.user.fullName;
             
-            Sfdc.canvas.byId('request').innerHTML = sr.context.user;
-            Sfdc.canvas.byId('user').innerHTML = sr.context.user.userId;
+           Sfdc.canvas.byId('user').innerHTML = sr.context.user.userId;
         });
 
     </script>
@@ -48,6 +47,6 @@
     <br/>
     <h1>Hello <span id='username'></span></h1>
     
-    <h3> <span id='request'></span></h3>
+    <h3> <span id='user'></span></h3>
 </body>
 </html>
